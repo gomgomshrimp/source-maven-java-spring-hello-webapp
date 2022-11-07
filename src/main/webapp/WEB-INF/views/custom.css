@@ -1,0 +1,23 @@
+h1 {
+  font-family: 'Jua', sans-serif;
+}
+
+h2 {
+  font-family: 'Jua', sans-serif;
+}
+
+h3 {
+  font-family: 'Jua', sans-serif;
+}
+ 
+.regular {
+  font-weight: 400;
+}
+ 
+.medium {
+  font-weight: 500;
+}
+ 
+.bold {
+  font-weight: 700;
+}
