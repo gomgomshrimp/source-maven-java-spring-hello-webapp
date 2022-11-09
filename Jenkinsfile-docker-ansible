@@ -27,20 +27,20 @@ pipeline {
     stage('Build Docker Image') {
       agent any
       steps {
-        sh 'docker build -t maven-web-app:v0.1-ansible .'
+        sh 'docker build -t maven-web-app:v0.2-ansible .'
       }
     }
     stage('Tag Docker Image') {
       agent any
       steps {
-        sh 'docker tag maven-web-app:v0.1-ansible gomgomshrimp/maven-web-app:v0.1-ansible'
+        sh 'docker tag maven-web-app:v0.2-ansible gomgomshrimp/maven-web-app:v0.2-ansible'
       }
     }
     stage('Publish Docker Image') {
       agent any
       steps {
         withDockerRegistry(credentialsId: 'docker-hub-token', url: 'https://index.docker.io/v1/') {
-          sh 'docker push gomgomshrimp/maven-web-app:v0.1-ansible'
+          sh 'docker push gomgomshrimp/maven-web-app:v0.2-ansible'
         }
       }
     }
